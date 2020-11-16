@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin</title>
+    <link rel="shortcut icon" href="assets/favicon/admin.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="radio" id="user" name="selecionar">
+    <input type="radio" id="cadastro-pista" name="selecionar">
+    <input type="radio" id="remover-pista" name="selecionar">
+    <h1 class="txt">Tela Administrativa</h1>
+    <a href="login.html" class="btnLogout">Logout</a>
+    <div class="container">
+        <label for="user" class="button" id="btnUser">
+            <img class="foto"src="assets/img/user.png" alt="usuario">
+            <h2 class="txt2">Cadastrar</h2>
+            <h2 class="txt2">usuario</h2>
+        </label>
+        <label for="cadastro-pista" class="button" id="btnCadastrar-pista">
+            <img class="foto"src="assets/img/search.png" alt="pista">
+            <h2 class="txt2">Cadastrar</h2>
+            <h2 class="txt2">Pista</h2>
+        </label>
+        <label for="remover-pista" class="button" id="btnRemover-pista">
+            <img class="foto" src="assets/img/delete.png" alt="pista">
+            <h2 class="txt2">Remover</h2>
+            <h2 class="txt2">Pistas</h2>
+        </label>
+    </div>
+    <form class="button" id="formUser">
+        <picture class="self">
+            <img src="assets/img/user.png" alt="">
+        </picture>
+        <input class="inputTxt" type="nome" placeholder="nome completo">
+        <input class="inputTxt" type="email" placeholder="Email">
+        <input class="inputTxt" type="password" placeholder="Senha">
+        <input type="radio" id="tipoUser" name="tipo">
+        <input type="radio" id="tipoAdmin" name="tipo">
+        <div class="escolhaDiv">
+            <label for="tipoUser" class="bolinha" id="bolA"></label>
+            <label class="txt3" for="tipoAdmin">administrador</label>
+            <label for="tipoAdmin" class="bolinha" id="Bola"></label>
+            <label class="txt3" for="tipoUser">Usuario</label>
+        </div>
+        <button type="submit" class="btnLogar">cadastrar</button>
+    </form>
+    <form class="button" id="formCadastro-pista">
+        <picture class="self">
+            <img src="assets/img/search.png" alt="">
+        </picture>
+        <input class="inputTxt" type="text" placeholder="Latitude">
+        <input class="inputTxt" type="text" placeholder="lONGITUDE">
+        <input class="inputTxt" type="text" placeholder="destino">
+        <button type="submit" class="btnLogar">cadastrar</button>
+    </form>
+    <form class="grid-container">
+        <picture class="imgAlerta">
+            <img src="assets/img/attention.png" alt="attention" >
+        </picture>
+        <div class="head1">
+            <h1 class="txtH">todas as pistas serão removidas</h1>
+            <h2 class="txtH">tem certeza?</h2>
+        </div>
+        <div class="btnCancelar">
+            <button type="submit" >cancelar processo</button>
+        </div>
+        <div class="btnDel">
+            <button type="submit" >deletar pistas</button>
+        </div>
+    </form>
+</body>
+</html>

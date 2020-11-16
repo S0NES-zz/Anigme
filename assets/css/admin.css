@@ -1,0 +1,299 @@
+body{
+    background: #352F44;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.txt{
+    color: #ffffff;
+    font-family: Big Shoulders Display, cursive;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+.btnLogout{
+    background-color: #F6E9E9;
+    border: none;
+    border-radius: 29px;
+    color: #411E8F;
+    cursor: pointer;
+    font-family: Big Shoulders Display, cursive;
+    font-size: 1.5em;
+    font-weight: 700;
+    left: 90%;
+    letter-spacing: 3px;
+    padding: 0.1%;
+    position: absolute;
+    top: 3%;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    text-decoration: none;
+    text-align: center;
+    width: 8%;
+}
+.btnLogout:hover{
+    background-color: #411E8F;
+    color: #f6e9e9;
+}
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    justify-content: center;
+    margin: 10% auto 0;
+    width: 90%;
+}
+#user, #cadastro-pista, #remover-pista, #tipoUser, #tipoAdmin{
+    display: none;
+}
+.button{
+    align-items: center;
+    background-color: #411E8F;
+    border-radius: 75px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 68vh;
+    justify-content: center;
+    transition: 1s ease;
+    width: 19vw;
+    z-index: 30;
+}
+#btnUser:hover, #btnCadastrar-pista:hover, #btnRemover-pista:hover{
+    background-color: #310a5d;
+}
+#btnUser, #btnCadastrar-pista{
+    margin-right: 7%;
+}
+
+.foto{
+    width: 90%;
+}
+.txt2{
+    color: #f6e9e9;
+    font-family: Big Shoulders Display, cursive;
+    font-weight: bold;
+    font-size: 3em;
+    margin-top: 15%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.txt2:last-of-type{
+    margin: 0;
+}
+/*Selecionar tipo login*/
+#user:checked ~ #formUser{
+    display: flex;
+}
+#cadastro-pista:checked ~ #formCadastro-pista{
+    display: flex;
+}
+#remover-pista:checked ~ .grid-container{
+    display: grid;
+}
+/*BLUR EFFECT*/
+#user:checked ~ .container,#user:checked ~ .txt, #user:checked ~ .btnLogout{
+    filter: blur(6px);
+}
+#cadastro-pista:checked ~ .container,#cadastro-pista:checked ~ .txt, #cadastro-pista:checked ~ .btnLogout{
+    filter: blur(6px);
+}
+#remover-pista:checked ~ .container,#remover-pista:checked ~ .txt, #remover-pista:checked ~ .btnLogout{
+    filter: blur(6px);
+}
+/*Formulario para login*/
+#formUser, #formCadastro-pista{
+    align-items: center;
+    display: none;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 25.4%;
+}
+#formUser{
+    left: 15%;
+}
+#formCadastro-pista{
+    left: 40.5%;
+}
+.self{
+    background: #f6e9e9;
+    width: 40%;
+    border-radius: 100%;
+}
+.self img{
+    max-width: 100%;
+}
+.inputTxt{
+    background-color: #411e8f;
+    border: 0;
+    border-bottom: 5px solid #2A2438;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #f6e9e9;
+    padding: 3% 2%;    
+    text-transform: uppercase;
+    width: 73%;
+}
+.inputTxt:focus{
+    outline: none;    
+}
+.inputTxt::placeholder{
+    color: #f6e9e9;    
+}
+.escolhaDiv{
+    align-items: center;
+    display: flex;
+    height: 7%;
+    justify-content: space-between;
+    width: 65%;
+}
+.bolinha{
+    cursor: pointer;
+    background-color: #2a2438;
+    border-radius: 30px;
+    height: 3%;
+    position: absolute;
+    transition: 0.7s ease-in;
+    width: 5.5%;
+}
+
+#tipoUser:checked ~ .escolhaDiv > #Bola{
+    background-color: #e16428;
+    width: 30%;
+}
+#tipoAdmin:checked ~ .escolhaDiv > #bolA{
+    background-color: #e16428;
+    width: 45%;
+}
+#bolA{
+    left: 11%;
+}
+#Bola{
+    left: 58%;
+}
+.txt3{
+    color: #f6e9e9;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    z-index: 20;
+}
+.btnLogar{
+    background-color: #e16428;
+    border: 0;
+    border-radius: 2em;
+    color: #f6e9e9;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 3% 0;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    width: 72%;
+}
+.btnLogar:hover{
+    background-color: #cd0a0a;
+}
+.grid-container {
+  display: none;
+  background: #FAFAFA;
+  border-radius: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.5fr;
+  gap: 4% 0px;
+  grid-template-areas:
+  "imgAlerta imgAlerta"
+  "head1 head1"
+  "btnCancelar btnDel";
+  height: 50%;
+  position: absolute;
+  padding: 2%;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  z-index: 100;
+}
+.button1 { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: button1;
+    justify-content: center;
+}
+.btnCancelar{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: btnCancelar; 
+    justify-content: center;
+
+}
+.btnCancelar button{
+    background-color: #F6E9E9;
+    color: #411E8F;
+    letter-spacing: 3px;
+}
+
+.btnCancelar button:hover{
+    background-color: #E16428;
+    color: #F6E9E9;
+}
+.btnDel { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: btnDel; 
+    justify-content: center;
+}
+.btnCancelar button, .btnDel button{
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Big Shoulders Display, cursive;
+    font-size: 2em;
+    font-weight: 800;
+    padding: 3% 8%;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    outline: none;
+}
+.btnDel button{
+    background-color: #411E8F;
+    color: #f6e9e9;
+    letter-spacing: 6px;
+}
+
+.btnDel button:hover{
+    background-color: #E16428;
+}
+.imgAlerta { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: imgAlerta;
+    justify-content: center;
+}
+.head1 { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: head1;
+    justify-content: space-between;
+}
+.txtH{
+    font-family: Big Shoulders Display;
+    font-style: normal;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.head1 h2{
+    color: #cdcdcd;
+}

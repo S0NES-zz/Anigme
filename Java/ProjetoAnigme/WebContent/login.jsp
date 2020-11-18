@@ -4,6 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" href="assets/favicon/login.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Big+Shoulders+Text&display=swap"
+        rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>
@@ -22,17 +28,17 @@
         </label>
     </div>
     <form class="button" id="formUser">
-        <picture class="self">
+        <div class="self">
             <img src="assets/img/user.png" alt="">
-        </picture>
+        </div>
         <input class="email" type="email" placeholder="Email">
         <input class="password" type="password" placeholder="Senha">
         <button type="submit" class="btnLogar">LOGAR</button>
     </form>
     <form class="button" id="formAdmin">
-        <picture class="self">
+        <div class="self">
             <img src="assets/img/admin.png" alt="">
-        </picture>
+        </div>
         <input class="email" type="email" placeholder="Email">
         <input class="password" type="password" placeholder="Senha">
         <button type="submit" class="btnLogar">LOGAR</button>

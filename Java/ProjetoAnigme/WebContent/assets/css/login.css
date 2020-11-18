@@ -1,0 +1,152 @@
+body{
+    background: #352F44;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.txt{
+    color: #ffffff;
+    font-family: Big Shoulders Display, cursive;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 8%;
+    left: 42.5%;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    justify-content: center;
+    margin: 10% auto 0;
+    width: 90%;
+}
+#user, #admin{
+    display: none;
+}
+.button{
+    align-items: center;
+    background-color: #411E8F;
+    border-radius: 75px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 68vh;
+    justify-content: center;
+    transition: 1s ease;
+    width: 19vw;
+    z-index: 30;
+}
+#btnUser:hover, #btnAdmin:hover{
+    background-color: #310a5d;
+}
+#btnUser{
+    margin-right: 20%;
+}
+.foto{
+    width: 90%;
+}
+.txt2{
+    color: #f6e9e9;
+    font-family: Big Shoulders Display, cursive;
+    font-weight: bold;
+    font-size: 3em;
+    margin-top: 15%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+/*Selecionar tipo login*/
+#user:checked ~ #formUser{
+    display: flex;
+}
+#admin:checked ~ #formAdmin{
+    display: flex;
+}
+/*BLUR EFFECT*/
+#user:checked ~ .container,#user:checked ~ .txt{
+    filter: blur(6px);
+}
+#admin:checked ~ .container,#admin:checked ~ .txt{
+    filter: blur(6px);
+}
+/*Formulario para login*/
+#formUser, #formAdmin{
+    align-items: center;
+    display: none;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 25.4%;
+}
+#formUser{
+    left: 21.9%;
+}
+#formAdmin{
+    left: 59%;
+}
+.self{
+    background: #f6e9e9;
+    border-radius: 100%;
+}
+.email{
+    background-color: #411e8f;
+    border: 0;
+    border-bottom: 5px solid #2A2438;
+    background-image: url("../img/mail.png");
+    background-size: 13%;
+    background-repeat: no-repeat;
+    background-position: left;  
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #f6e9e9;
+    padding: 3% 11% 2%;    
+    text-transform: uppercase;
+    width: 48%;
+}
+.email:focus{
+    outline: none;    
+}
+.email::placeholder{
+    color: #f6e9e9;    
+}
+.password{
+    background-color: #411e8f;
+    border: 0;
+    border-bottom: 5px solid #2A2438;
+    background-image: url("../img/lock.png");
+    background-size: 13%;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #f6e9e9;
+    padding: 3% 11% 2%;
+    text-transform: uppercase;
+    width: 48%;
+}
+.password:focus{
+    outline: none;
+}
+.password::placeholder{
+    color: #f6e9e9;
+}
+
+.btnLogar{
+    background-color: #e16428;
+    border: 0;
+    border-radius: 2em;
+    color: #f6e9e9;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 3% 0;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    width: 72%;
+}
+.btnLogar:hover{
+    background-color: #cd0a0a;
+}

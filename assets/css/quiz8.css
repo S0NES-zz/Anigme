@@ -36,8 +36,152 @@ body{
     justify-content: center; 
 }
 .enigma{
+    align-items: center;
     background: #411E8F;
     border-radius: 4em;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
     height: 97%;
+    justify-content: center; 
+    width: 80%;
+}
+.question{
+    border: 1px solid black;
+    width: 60%;
+    height: 52%;
+}
+/* Selcionar Opcoes*/
+.answer{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "labelBtn1 labelTxt1"
+    "labelBtn2 labelTxt2"
+    "labelbtn3 labelTxt3"
+    "labelbtn4 labelTxt4";
+    height: 40%;
+    margin-top: 1%;
+    width: 60%;
+
+}
+.answer input{
+    display: none;
+}
+.labelBtn{
+    width: 30px;
+    height: 30px;
+    border-radius: 10em;
+    cursor: pointer;
+    position: absolute;
+    background: #F6E9E9;
+    transition: 1s;
+}
+.labelTxt{
+    color: #F6E9E9; 
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 1.6em;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+#lBtn1{
+    bottom: 32.5%;
+    left: 518px;
+    grid-area: labelBtn1;
+}
+#lTxt1{
+    grid-area: labelTxt1;
+    z-index: 50;    
+}
+#lBtn2{
+    bottom: 24.5%;
+    left: 518px;
+    grid-area: labelBtn2;
+}
+#lTxt2{
+    grid-area: labelTxt2;
+    z-index: 50;
+}
+
+#lBtn3{
+    bottom: 17%;
+    left: 518px;
+    grid-area: labelBtn3;
+}
+#lTxt3{
+    grid-area: labelTxt3;
+    z-index: 50;
+}
+
+#lBtn4{
+    bottom: 9.2%;
+    left: 518px;
+    grid-area: labelBtn4;
+}
+#lTxt4{
+    grid-area: labelTxt4;
+    z-index: 50;
+}
+ /*HOVER ACTIVITIES start*/
+.labelBtn:hover{
+    background: #E16428;
+}
+#lTxt1:hover ~ #lBtn1{
+    background: #E16428;
+}
+#lTxt2:hover ~ #lBtn2{
+    background: #E16428;
+}
+#lTxt3:hover ~ #lBtn3{
+    background: #E16428;
+}
+#lTxt4:hover ~ #lBtn4{
+    background: #E16428;
+}
+ /*HOVER ACTIVITIES end*/
+/*CLICK ACTIVITIES start*/
+#ans1:checked ~ #lBtn1{
+    background: #E16428;
+    width: 37%;
+}
+#ans2:checked ~ #lBtn2{
+    background: #E16428;
+    width: 35%;
+}
+#ans3:checked ~ #lBtn3{
+    background: #E16428;
+    width: 33%;
+}
+#ans4:checked ~ #lBtn4{
+    background: #E16428;
+    width: 33%;
+}
+/*CLICK ACTIVITIES end*/
+
+/*BUTTON SUBMIT*/
+#ans1:checked ~ .submit, #ans2:checked ~ .submit, #ans3:checked ~ .submit, #ans4:checked ~ .submit{
+    display: inline;
+}
+.submit{
+    bottom: 20%;
+    border: none;
+    border-radius: 13% 87% 87% 13% / 52% 52% 48% 48% ;
+    background: #e16428;
+    color: #F6E9E9;
+    cursor: pointer;
+    display: none;
+    font-family: Roboto;
+    font-size: 1em;
+    height: 9%;
+    position: absolute;
+    transition: 0.5s;
+    right: 25%;
+    outline: none;
+    width: 5%;
+    z-index: 100;
+}
+.submit:hover{
+    background: #f0a500;
 }

@@ -46,9 +46,20 @@ body{
     width: 80%;
 }
 .question{
-    border: 1px solid black;
-    width: 60%;
+    align-items: center;
+    display: flex;
     height: 52%;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+.txt2{
+    color: #F6E9E9;
+    font-family: Big Shoulders Text;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; 
+    text-align: justify;
 }
 /* Selcionar Opcoes*/
 .answer{
@@ -114,7 +125,6 @@ body{
     grid-area: labelTxt3;
     z-index: 50;
 }
-
 #lBtn4{
     bottom: 9.2%;
     left: 518px;

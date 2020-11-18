@@ -46,9 +46,20 @@ body{
     width: 80%;
 }
 .question{
-    border: 1px solid black;
-    width: 60%;
+    align-items: center;
+    display: flex;
     height: 52%;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+.txt2{
+    color: #F6E9E9;
+    font-family: Big Shoulders Text;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; 
+    text-align: justify;
 }
 /* Selcionar Opcoes*/
 .answer{
@@ -144,19 +155,19 @@ body{
 /*CLICK ACTIVITIES start*/
 #ans1:checked ~ #lBtn1{
     background: #E16428;
-    width: 37%;
+    width: 12%;
 }
 #ans2:checked ~ #lBtn2{
     background: #E16428;
-    width: 35%;
+    width: 12%;
 }
 #ans3:checked ~ #lBtn3{
     background: #E16428;
-    width: 33%;
+    width: 10%;
 }
 #ans4:checked ~ #lBtn4{
     background: #E16428;
-    width: 33%;
+    width: 12%;
 }
 /*CLICK ACTIVITIES end*/
 

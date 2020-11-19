@@ -234,13 +234,15 @@ body{
     justify-content: center;
 
 }
-.btnCancelar button{
+.btnCancelar a{
     background-color: #F6E9E9;
     color: #411E8F;
+    text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 3px;
 }
 
-.btnCancelar button:hover{
+.btnCancelar a:hover{
     background-color: #E16428;
     color: #F6E9E9;
 }
@@ -251,7 +253,7 @@ body{
     grid-area: btnDel; 
     justify-content: center;
 }
-.btnCancelar button, .btnDel button{
+.btnCancelar a, .btnDel button{
     border: 0;
     border-radius: 15px;
     cursor: pointer;
